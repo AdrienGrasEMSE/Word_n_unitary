@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/Word_n_unitary.dir/src/Main.cpp.o CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.o -o Word_n_unitary
