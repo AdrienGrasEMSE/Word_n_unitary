@@ -92,7 +92,7 @@ Tests_word_n_unitary_EXTERNAL_OBJECTS =
 
 Tests_word_n_unitary: CMakeFiles/Tests_word_n_unitary.dir/tests/Tests_word_n_unitary.cpp.o
 Tests_word_n_unitary: CMakeFiles/Tests_word_n_unitary.dir/build.make
-Tests_word_n_unitary: libWord_n_unitary.a
+Tests_word_n_unitary: libWord_n_unitary_lib.so
 Tests_word_n_unitary: CMakeFiles/Tests_word_n_unitary.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/adrieng/Documents/Dev/C-Cpp/RSA/Word_n_unitary/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Tests_word_n_unitary"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Tests_word_n_unitary.dir/link.txt --verbose=$(VERBOSE)

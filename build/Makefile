@@ -127,17 +127,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Word_n_unitary
+# Target rules for targets named Word_n_unitary_lib
 
 # Build rule for target.
-Word_n_unitary: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Word_n_unitary
-.PHONY : Word_n_unitary
+Word_n_unitary_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Word_n_unitary_lib
+.PHONY : Word_n_unitary_lib
 
 # fast build rule for target.
-Word_n_unitary/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Word_n_unitary.dir/build.make CMakeFiles/Word_n_unitary.dir/build
-.PHONY : Word_n_unitary/fast
+Word_n_unitary_lib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Word_n_unitary_lib.dir/build.make CMakeFiles/Word_n_unitary_lib.dir/build
+.PHONY : Word_n_unitary_lib/fast
 
 #=============================================================================
 # Target rules for targets named Tests_word_n_unitary
@@ -157,7 +157,7 @@ src/Word_n_unitary.o: src/Word_n_unitary.cpp.o
 
 # target to build an object file
 src/Word_n_unitary.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Word_n_unitary.dir/build.make CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Word_n_unitary_lib.dir/build.make CMakeFiles/Word_n_unitary_lib.dir/src/Word_n_unitary.cpp.o
 .PHONY : src/Word_n_unitary.cpp.o
 
 src/Word_n_unitary.i: src/Word_n_unitary.cpp.i
@@ -165,7 +165,7 @@ src/Word_n_unitary.i: src/Word_n_unitary.cpp.i
 
 # target to preprocess a source file
 src/Word_n_unitary.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Word_n_unitary.dir/build.make CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Word_n_unitary_lib.dir/build.make CMakeFiles/Word_n_unitary_lib.dir/src/Word_n_unitary.cpp.i
 .PHONY : src/Word_n_unitary.cpp.i
 
 src/Word_n_unitary.s: src/Word_n_unitary.cpp.s
@@ -173,7 +173,7 @@ src/Word_n_unitary.s: src/Word_n_unitary.cpp.s
 
 # target to generate assembly for a file
 src/Word_n_unitary.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Word_n_unitary.dir/build.make CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Word_n_unitary_lib.dir/build.make CMakeFiles/Word_n_unitary_lib.dir/src/Word_n_unitary.cpp.s
 .PHONY : src/Word_n_unitary.cpp.s
 
 tests/Tests_word_n_unitary.o: tests/Tests_word_n_unitary.cpp.o
@@ -210,7 +210,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... Tests_word_n_unitary"
-	@echo "... Word_n_unitary"
+	@echo "... Word_n_unitary_lib"
 	@echo "... src/Word_n_unitary.o"
 	@echo "... src/Word_n_unitary.i"
 	@echo "... src/Word_n_unitary.s"

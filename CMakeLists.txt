@@ -1,6 +1,5 @@
 # CMakeLists.txt for the Word_n_unitary project
 
-
 # Specify the minimum required CMake version
 cmake_minimum_required(VERSION 3.10)
 
@@ -22,18 +21,20 @@ set(LIBRARY_SOURCES
 
 
 
-# Create a library (static or shared based on your preference)
-add_library(Word_n_unitary STATIC ${LIBRARY_SOURCES})
-
-
+# Create a shared library
+add_library(Word_n_unitary_lib SHARED ${LIBRARY_SOURCES})
 
 # Set the library's public headers
-target_include_directories(Word_n_unitary PUBLIC ${PROJECT_SOURCE_DIR}/include)
+# This makes sure that when other projects link to this library, they can access the headers
+target_include_directories(Word_n_unitary_lib PUBLIC ${PROJECT_SOURCE_DIR}/include)
+
+
 
 # Enable testing
 enable_testing()
 
 # Add tests
 add_executable(Tests_word_n_unitary tests/Tests_word_n_unitary.cpp)
-target_link_libraries(Tests_word_n_unitary Word_n_unitary)
 
+# Link the library to the tests
+target_link_libraries(Tests_word_n_unitary Word_n_unitary_lib)

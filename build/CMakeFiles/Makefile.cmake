@@ -44,6 +44,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/Word_n_unitary.dir/DependInfo.cmake"
+  "CMakeFiles/Word_n_unitary_lib.dir/DependInfo.cmake"
   "CMakeFiles/Tests_word_n_unitary.dir/DependInfo.cmake"
   )
