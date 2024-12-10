@@ -6,6 +6,7 @@
 #include <iostream>             // For the std::cout override
 #include <stdint.h>             // For the data format : uint64_t
 #include <random>               // For the randomize method
+#include <string>               // For the string setter
 
 
 /**
@@ -47,10 +48,11 @@ public:
 
 
     // Word unit setter and getter
-    void            setData(uint64_t data_) {this->data = data_;}
-    uint64_t        getData()   const       {return this->data;}
-    uint64_t        getCarry()  const       {return static_cast<uint64_t>(data >> 32);}
-    void            resetCarry()            {this->data = this->data & 0x00000000FFFFFFFFULL;}
+    void            setData(uint64_t    data_)  {this->data = data_;}
+    void            setData(std::string data_);
+    uint64_t        getData()   const           {return this->data;}
+    uint64_t        getCarry()  const           {return static_cast<uint64_t>(data >> 32);}
+    void            resetCarry()                {this->data = this->data & 0x00000000FFFFFFFFULL;}
 
 
     // Fill a random value in the data

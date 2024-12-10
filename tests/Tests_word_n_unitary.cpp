@@ -31,8 +31,8 @@ int main() {
 
     // Display test
     Word_n_unitary word = Word_n_unitary(0x1AFFFF0000ULL);
-    std::cout << "Test(Word_n_unitary) : Cout -> " << word << std::endl;
-    std::cout << "Test(Word_n_unitary) : DISPLAY -> ";
+    std::cout << "Test(Word_n_unitary) : Cout               -> " << word << std::endl;
+    std::cout << "Test(Word_n_unitary) : DISPLAY            -> ";
     word.display();
 
 
@@ -40,9 +40,9 @@ int main() {
     int carry = 0;
     if (word.getCarry() != 0x0000001A) {
         carry = 1;
-        std::cout << "Test(Word_n_unitary) : CARRY -> FAILED" << std::endl;
+        std::cout << "Test(Word_n_unitary) : CARRY              -> FAILED" << std::endl;
     } else {
-        std::cout << "Test(Word_n_unitary) : CARRY -> PASSED" << std::endl;
+        std::cout << "Test(Word_n_unitary) : CARRY              -> PASSED" << std::endl;
     }
 
 
@@ -51,42 +51,53 @@ int main() {
     word.resetCarry();
     if (word.getCarry() != 0x00000000) {
         carry_reset = 1;
-        std::cout << "Test(Word_n_unitary) : CARRY RESET -> FAILED" << std::endl;
+        std::cout << "Test(Word_n_unitary) : CARRY RESET        -> FAILED" << std::endl;
     } else {
-        std::cout << "Test(Word_n_unitary) : CARRY RESET -> PASSED" << std::endl;
+        std::cout << "Test(Word_n_unitary) : CARRY RESET        -> PASSED" << std::endl;
     }
 
 
     // Randomizer test
     word.randomize();
-    std::cout << "Test(Word_n_unitary) : RANDOMIZE -> ";
+    std::cout << "Test(Word_n_unitary) : RANDOMIZE          -> ";
     word.display();
+
+
+    // String setter test
+    int string_setter = 0;
+    word.setData("0x1AFFFFULL");
+    if (word.getData() != 0x1AFFFFULL) {
+        string_setter = 1;
+        std::cout << "Test(Word_n_unitary) : STRING SETTER      -> FAILED" << std::endl;
+    } else {
+        std::cout << "Test(Word_n_unitary) : STRING SETTER      -> PASSED" << std::endl;
+    }
 
 
     // Addition
     int addition = test_Word_n_unitary_addition();
     if (addition == 1) {
-        std::cout << "Test(Word_n_unitary) : ADDITION -> FAILED" << std::endl;
+        std::cout << "Test(Word_n_unitary) : ADDITION           -> FAILED" << std::endl;
     } else {
-        std::cout << "Test(Word_n_unitary) : ADDITION -> PASSED" << std::endl;
+        std::cout << "Test(Word_n_unitary) : ADDITION           -> PASSED" << std::endl;
     }
 
 
     // Substraction
     int substaction = test_Word_n_unitary_substraction();
     if (substaction == 1) {
-        std::cout << "Test(Word_n_unitary) : SUBSTRACTION -> FAILED" << std::endl;
+        std::cout << "Test(Word_n_unitary) : SUBSTRACTION       -> FAILED" << std::endl;
     } else {
-        std::cout << "Test(Word_n_unitary) : SUBSTRACTION -> PASSED" << std::endl;
+        std::cout << "Test(Word_n_unitary) : SUBSTRACTION       -> PASSED" << std::endl;
     }
 
 
     // Addition
     int multiplication = test_Word_n_unitary_multiplication();
     if (multiplication == 1) {
-        std::cout << "Test(Word_n_unitary) : MULTIPLICATION -> FAILED" << std::endl;
+        std::cout << "Test(Word_n_unitary) : MULTIPLICATION     -> FAILED" << std::endl;
     } else {
-        std::cout << "Test(Word_n_unitary) : MULTIPLICATION -> PASSED" << std::endl;
+        std::cout << "Test(Word_n_unitary) : MULTIPLICATION     -> PASSED" << std::endl;
     }
 
 

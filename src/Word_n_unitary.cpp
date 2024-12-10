@@ -56,6 +56,30 @@ Word_n_unitary::~Word_n_unitary() {
  */
 
 /**
+ * String setter :
+ * 
+ * Since we can write strings that look likes hexa numbers, here is the setter.
+ */
+void Word_n_unitary::setData(std::string data_) {
+
+    // Trying to convert the string into a hex number
+    try {
+
+        // Converting the <string>data_ into an understanble data
+        this->data = std::stoul(data_, nullptr, 16);
+
+    }
+    catch (const std::invalid_argument& e) {
+        std::cerr << "Error: the string does not represent a valid number." << std::endl;
+    }
+    catch (const std::out_of_range& e) {
+        std::cerr << "Error: the string represents a number out of range." << std::endl;
+    }
+    
+}
+
+
+/**
  * Randomize : fill the data with random 0 and 1 
  */
 void Word_n_unitary::randomize() {
