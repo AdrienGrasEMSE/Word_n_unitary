@@ -102,7 +102,7 @@ int main() {
 
 
     // Program end
-    if ((carry + carry_reset + addition + substaction + multiplication) == 0) {
+    if ((carry + carry_reset + addition + string_setter + substaction + multiplication) == 0) {
         std::cout << "Test(Word_n_unitary) : PASSED" << std::endl;
         return 0;
     }
