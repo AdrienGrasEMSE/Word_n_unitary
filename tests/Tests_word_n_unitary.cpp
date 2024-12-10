@@ -29,6 +29,17 @@ int main() {
     std::cout << "Test(Word_n_unitary) : START" << std::endl;
 
 
+    // Display test
+    Word_n_unitary word = Word_n_unitary(0x1FFFF0000ULL);
+    std::cout << word << std::endl;
+    word.display();
+
+
+    // Randomizer test
+    word.randomize();
+    word.display();
+
+
     // Addition
     int addition = test_Word_n_unitary_addition();
     if (addition == 1) {
