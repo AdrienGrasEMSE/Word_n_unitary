@@ -52,6 +52,6 @@ Does that sound complicated? I think it is. But in the case of the Word_n_unitar
 To sum up, if we have A and B, two objects in Word_n_unitary :
 - $A * B = a_0 * b_0$3
 ###
-> Adrien GRAS, Ecole d'ingénieurs de Mines Saint Étienne
+> Adrien GRAS, École d'ingénieurs de Mines Saint Étienne
 >
->I'm not the best in English, so don't judge me too harshly :)
+> I'm not the best in English, so don't judge me too harshly :)
