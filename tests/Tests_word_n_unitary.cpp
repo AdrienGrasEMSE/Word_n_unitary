@@ -30,13 +30,36 @@ int main() {
 
 
     // Display test
-    Word_n_unitary word = Word_n_unitary(0x1FFFF0000ULL);
-    std::cout << word << std::endl;
+    Word_n_unitary word = Word_n_unitary(0x1AFFFF0000ULL);
+    std::cout << "Test(Word_n_unitary) : Cout -> " << word << std::endl;
+    std::cout << "Test(Word_n_unitary) : DISPLAY -> ";
     word.display();
+
+
+    // Carry test
+    int carry = 0;
+    if (word.getCarry() != 0x0000001A) {
+        carry = 1;
+        std::cout << "Test(Word_n_unitary) : CARRY -> FAILED" << std::endl;
+    } else {
+        std::cout << "Test(Word_n_unitary) : CARRY -> PASSED" << std::endl;
+    }
+
+
+    // Carry reset test
+    int carry_reset = 0;
+    word.resetCarry();
+    if (word.getCarry() != 0x00000000) {
+        carry_reset = 1;
+        std::cout << "Test(Word_n_unitary) : CARRY RESET -> FAILED" << std::endl;
+    } else {
+        std::cout << "Test(Word_n_unitary) : CARRY RESET -> PASSED" << std::endl;
+    }
 
 
     // Randomizer test
     word.randomize();
+    std::cout << "Test(Word_n_unitary) : RANDOMIZE -> ";
     word.display();
 
 
@@ -68,7 +91,7 @@ int main() {
 
 
     // Program end
-    if ((addition + substaction + multiplication) == 0) {
+    if ((carry + carry_reset + addition + substaction + multiplication) == 0) {
         std::cout << "Test(Word_n_unitary) : PASSED" << std::endl;
         return 0;
     }

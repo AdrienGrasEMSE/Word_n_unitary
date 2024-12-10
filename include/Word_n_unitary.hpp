@@ -46,9 +46,11 @@ public:
     ~Word_n_unitary();
 
 
-    // Bloc setter and getter
+    // Word unit setter and getter
     void            setData(uint64_t data_) {this->data = data_;}
-    uint64_t        getData() const         {return this->data;}
+    uint64_t        getData()   const       {return this->data;}
+    uint64_t        getCarry()  const       {return static_cast<uint64_t>(data >> 32);}
+    void            resetCarry()            {this->data = this->data & 0x00000000FFFFFFFFULL;}
 
 
     // Fill a random value in the data
