@@ -2,7 +2,6 @@
 #define WORD_N_UNITARY
 
 
-
 // Imports
 #include <iostream>             // For the std::cout override
 #include <stdint.h>             // For the data format : uint64_t
@@ -54,6 +53,10 @@ public:
 
     // Fill a random value in the data
     void            randomize();
+
+
+    // Display the full data stored (with its carries)
+    void            display(bool endl = true)   const;
 
 
     // Overriding operators
