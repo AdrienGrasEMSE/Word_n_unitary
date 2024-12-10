@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adrieng/Documents/RSA/word_n/Word_n_unitary
+CMAKE_SOURCE_DIR = /home/adrieng/Documents/Dev/C-Cpp/RSA/Word_n_unitary
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adrieng/Documents/RSA/word_n/Word_n_unitary/build
+CMAKE_BINARY_DIR = /home/adrieng/Documents/Dev/C-Cpp/RSA/Word_n_unitary/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Word_n_unitary.dir/depend.make
@@ -69,51 +69,36 @@ include CMakeFiles/Word_n_unitary.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Word_n_unitary.dir/flags.make
 
-CMakeFiles/Word_n_unitary.dir/src/Main.cpp.o: CMakeFiles/Word_n_unitary.dir/flags.make
-CMakeFiles/Word_n_unitary.dir/src/Main.cpp.o: /home/adrieng/Documents/RSA/word_n/Word_n_unitary/src/Main.cpp
-CMakeFiles/Word_n_unitary.dir/src/Main.cpp.o: CMakeFiles/Word_n_unitary.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adrieng/Documents/RSA/word_n/Word_n_unitary/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Word_n_unitary.dir/src/Main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Word_n_unitary.dir/src/Main.cpp.o -MF CMakeFiles/Word_n_unitary.dir/src/Main.cpp.o.d -o CMakeFiles/Word_n_unitary.dir/src/Main.cpp.o -c /home/adrieng/Documents/RSA/word_n/Word_n_unitary/src/Main.cpp
-
-CMakeFiles/Word_n_unitary.dir/src/Main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Word_n_unitary.dir/src/Main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adrieng/Documents/RSA/word_n/Word_n_unitary/src/Main.cpp > CMakeFiles/Word_n_unitary.dir/src/Main.cpp.i
-
-CMakeFiles/Word_n_unitary.dir/src/Main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Word_n_unitary.dir/src/Main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adrieng/Documents/RSA/word_n/Word_n_unitary/src/Main.cpp -o CMakeFiles/Word_n_unitary.dir/src/Main.cpp.s
-
 CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.o: CMakeFiles/Word_n_unitary.dir/flags.make
-CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.o: /home/adrieng/Documents/RSA/word_n/Word_n_unitary/src/Word_n_unitary.cpp
+CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.o: /home/adrieng/Documents/Dev/C-Cpp/RSA/Word_n_unitary/src/Word_n_unitary.cpp
 CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.o: CMakeFiles/Word_n_unitary.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adrieng/Documents/RSA/word_n/Word_n_unitary/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.o -MF CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.o.d -o CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.o -c /home/adrieng/Documents/RSA/word_n/Word_n_unitary/src/Word_n_unitary.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adrieng/Documents/Dev/C-Cpp/RSA/Word_n_unitary/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.o -MF CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.o.d -o CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.o -c /home/adrieng/Documents/Dev/C-Cpp/RSA/Word_n_unitary/src/Word_n_unitary.cpp
 
 CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adrieng/Documents/RSA/word_n/Word_n_unitary/src/Word_n_unitary.cpp > CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adrieng/Documents/Dev/C-Cpp/RSA/Word_n_unitary/src/Word_n_unitary.cpp > CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.i
 
 CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adrieng/Documents/RSA/word_n/Word_n_unitary/src/Word_n_unitary.cpp -o CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adrieng/Documents/Dev/C-Cpp/RSA/Word_n_unitary/src/Word_n_unitary.cpp -o CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.s
 
 # Object files for target Word_n_unitary
 Word_n_unitary_OBJECTS = \
-"CMakeFiles/Word_n_unitary.dir/src/Main.cpp.o" \
 "CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.o"
 
 # External object files for target Word_n_unitary
 Word_n_unitary_EXTERNAL_OBJECTS =
 
-Word_n_unitary: CMakeFiles/Word_n_unitary.dir/src/Main.cpp.o
-Word_n_unitary: CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.o
-Word_n_unitary: CMakeFiles/Word_n_unitary.dir/build.make
-Word_n_unitary: CMakeFiles/Word_n_unitary.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/adrieng/Documents/RSA/word_n/Word_n_unitary/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Word_n_unitary"
+libWord_n_unitary.a: CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.o
+libWord_n_unitary.a: CMakeFiles/Word_n_unitary.dir/build.make
+libWord_n_unitary.a: CMakeFiles/Word_n_unitary.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/adrieng/Documents/Dev/C-Cpp/RSA/Word_n_unitary/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libWord_n_unitary.a"
+	$(CMAKE_COMMAND) -P CMakeFiles/Word_n_unitary.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Word_n_unitary.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/Word_n_unitary.dir/build: Word_n_unitary
+CMakeFiles/Word_n_unitary.dir/build: libWord_n_unitary.a
 .PHONY : CMakeFiles/Word_n_unitary.dir/build
 
 CMakeFiles/Word_n_unitary.dir/clean:
@@ -121,6 +106,6 @@ CMakeFiles/Word_n_unitary.dir/clean:
 .PHONY : CMakeFiles/Word_n_unitary.dir/clean
 
 CMakeFiles/Word_n_unitary.dir/depend:
-	cd /home/adrieng/Documents/RSA/word_n/Word_n_unitary/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/adrieng/Documents/RSA/word_n/Word_n_unitary /home/adrieng/Documents/RSA/word_n/Word_n_unitary /home/adrieng/Documents/RSA/word_n/Word_n_unitary/build /home/adrieng/Documents/RSA/word_n/Word_n_unitary/build /home/adrieng/Documents/RSA/word_n/Word_n_unitary/build/CMakeFiles/Word_n_unitary.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/adrieng/Documents/Dev/C-Cpp/RSA/Word_n_unitary/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/adrieng/Documents/Dev/C-Cpp/RSA/Word_n_unitary /home/adrieng/Documents/Dev/C-Cpp/RSA/Word_n_unitary /home/adrieng/Documents/Dev/C-Cpp/RSA/Word_n_unitary/build /home/adrieng/Documents/Dev/C-Cpp/RSA/Word_n_unitary/build /home/adrieng/Documents/Dev/C-Cpp/RSA/Word_n_unitary/build/CMakeFiles/Word_n_unitary.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/Word_n_unitary.dir/depend
 

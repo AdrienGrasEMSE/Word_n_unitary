@@ -1,1 +1,2 @@
-/usr/bin/c++ CMakeFiles/Word_n_unitary.dir/src/Main.cpp.o CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.o -o Word_n_unitary
+/usr/bin/ar qc libWord_n_unitary.a CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.o
+/usr/bin/ranlib libWord_n_unitary.a

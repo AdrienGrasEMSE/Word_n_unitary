@@ -3,9 +3,68 @@
  * 
  * 
  * Test vector : generated using python
+ * 
+ * @author AdrienG
  */
 #include <iostream>
 #include "../include/Word_n_unitary.hpp"
+
+
+
+
+// Signatures
+int test_Word_n_unitary_addition();
+int test_Word_n_unitary_substraction();
+int test_Word_n_unitary_multiplication();
+
+
+
+
+/**
+ * All test execution
+ */
+int main() {
+
+    // Test start
+    std::cout << "Test(Word_n_unitary) : START" << std::endl;
+
+
+    // Addition
+    int addition = test_Word_n_unitary_addition();
+    if (addition == 1) {
+        std::cout << "Test(Word_n_unitary) : ADDITION -> FAILED" << std::endl;
+    } else {
+        std::cout << "Test(Word_n_unitary) : ADDITION -> PASSED" << std::endl;
+    }
+
+
+    // Substraction
+    int substaction = test_Word_n_unitary_substraction();
+    if (substaction == 1) {
+        std::cout << "Test(Word_n_unitary) : SUBSTRACTION -> FAILED" << std::endl;
+    } else {
+        std::cout << "Test(Word_n_unitary) : SUBSTRACTION -> PASSED" << std::endl;
+    }
+
+
+    // Addition
+    int multiplication = test_Word_n_unitary_multiplication();
+    if (multiplication == 1) {
+        std::cout << "Test(Word_n_unitary) : MULTIPLICATION -> FAILED" << std::endl;
+    } else {
+        std::cout << "Test(Word_n_unitary) : MULTIPLICATION -> PASSED" << std::endl;
+    }
+
+
+    // Program end
+    if ((addition + substaction + multiplication) == 0) {
+        std::cout << "Test(Word_n_unitary) : PASSED" << std::endl;
+        return 0;
+    }
+    std::cout << "Test(Word_n_unitary) : FAILED" << std::endl;
+    return 1;
+
+}
 
 
 
@@ -50,8 +109,8 @@ int test_Word_n_unitary_addition() {
      * C = A + B = 0xC486F4A8
      */
     word_n_unitary_1.setData(0x5D3BCC74);
-    word_n_unitary_2.setData(0x674B2834);
-    word_n_unitary_3 = word_n_unitary_1 + word_n_unitary_2;
+    word_n_unitary_3.setData(0x674B2834);
+    word_n_unitary_3 += word_n_unitary_1;
 
 
     // Test + reset
@@ -241,54 +300,5 @@ int test_Word_n_unitary_multiplication() {
 
     // End of test
     return 0;
-
-}
-
-
-
-
-/**
- * All test execution
- */
-int word_n_unitary_all_test() {
-
-    // Test start
-    std::cout << "Test(Word_n_unitary) : START" << std::endl;
-
-
-    // Addition
-    int addition = test_Word_n_unitary_addition();
-    if (addition == 1) {
-        std::cout << "Test(Word_n_unitary) : ADDITION -> FAILED" << std::endl;
-    } else {
-        std::cout << "Test(Word_n_unitary) : ADDITION -> PASSED" << std::endl;
-    }
-
-
-    // Substraction
-    int substaction = test_Word_n_unitary_substraction();
-    if (substaction == 1) {
-        std::cout << "Test(Word_n_unitary) : SUBSTRACTION -> FAILED" << std::endl;
-    } else {
-        std::cout << "Test(Word_n_unitary) : SUBSTRACTION -> PASSED" << std::endl;
-    }
-
-
-    // Addition
-    int multiplication = test_Word_n_unitary_multiplication();
-    if (multiplication == 1) {
-        std::cout << "Test(Word_n_unitary) : MULTIPLICATION -> FAILED" << std::endl;
-    } else {
-        std::cout << "Test(Word_n_unitary) : MULTIPLICATION -> PASSED" << std::endl;
-    }
-
-
-    // Program end
-    if ((addition + substaction + multiplication) == 0) {
-        std::cout << "Test(Word_n_unitary) : PASSED" << std::endl;
-        return 0;
-    }
-    std::cout << "Test(Word_n_unitary) : FAILED" << std::endl;
-    return 1;
 
 }

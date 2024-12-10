@@ -1,4 +1,4 @@
-# Install script for directory: /home/adrieng/Documents/RSA/word_n/Word_n_unitary
+# Install script for directory: /home/adrieng/Documents/Dev/C-Cpp/RSA/Word_n_unitary
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -57,6 +57,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "/home/adrieng/Documents/RSA/word_n/Word_n_unitary/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/home/adrieng/Documents/Dev/C-Cpp/RSA/Word_n_unitary/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

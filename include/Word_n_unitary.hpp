@@ -57,11 +57,12 @@ public:
 
 
     // Overriding operators
-    Word_n_unitary  operator+(const Word_n_unitary& word_n_unitary_2) const;
-    Word_n_unitary  operator-(const Word_n_unitary& word_n_unitary_2) const;
-    Word_n_unitary  operator*(const Word_n_unitary& word_n_unitary_2) const;
-    bool            operator!=(const Word_n_unitary& other) const;
-    bool            operator!=(const uint64_t data_2) const;
+    Word_n_unitary  operator+   (const Word_n_unitary& word_n_unitary_2)    const;
+    Word_n_unitary& operator+=  (const Word_n_unitary& word_n_unitary_2);
+    Word_n_unitary  operator-   (const Word_n_unitary& word_n_unitary_2)    const;
+    Word_n_unitary  operator*   (const Word_n_unitary& word_n_unitary_2)    const;
+    bool            operator!=  (const Word_n_unitary& word_n_unitary_2)    const;
+    bool            operator!=  (const uint64_t data_2)                     const;
 
 
     // Overriding std::cout for display

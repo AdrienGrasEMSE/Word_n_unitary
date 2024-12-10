@@ -1,8 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Tests_word_n_unitary.dir/src/Main.cpp.o"
-  "CMakeFiles/Tests_word_n_unitary.dir/src/Main.cpp.o.d"
-  "CMakeFiles/Tests_word_n_unitary.dir/src/Word_n_unitary.cpp.o"
-  "CMakeFiles/Tests_word_n_unitary.dir/src/Word_n_unitary.cpp.o.d"
   "CMakeFiles/Tests_word_n_unitary.dir/tests/Tests_word_n_unitary.cpp.o"
   "CMakeFiles/Tests_word_n_unitary.dir/tests/Tests_word_n_unitary.cpp.o.d"
   "Tests_word_n_unitary"

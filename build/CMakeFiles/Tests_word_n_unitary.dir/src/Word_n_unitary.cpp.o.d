@@ -1,7 +1,7 @@
 CMakeFiles/Tests_word_n_unitary.dir/src/Word_n_unitary.cpp.o: \
- /home/adrieng/Documents/RSA/word_n/Word_n_unitary/src/Word_n_unitary.cpp \
+ /home/adrieng/Documents/Dev/C-Cpp/RSA/Word_n_unitary/src/Word_n_unitary.cpp \
  /usr/include/stdc-predef.h \
- /home/adrieng/Documents/RSA/word_n/Word_n_unitary/src/../include/Word_n_unitary.hpp \
+ /home/adrieng/Documents/Dev/C-Cpp/RSA/Word_n_unitary/src/../include/Word_n_unitary.hpp \
  /usr/include/c++/14/iostream /usr/include/c++/14/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/14/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/14/bits/os_defines.h \

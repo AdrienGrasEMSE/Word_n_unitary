@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adrieng/Documents/RSA/word_n/Word_n_unitary
+CMAKE_SOURCE_DIR = /home/adrieng/Documents/Dev/C-Cpp/RSA/Word_n_unitary
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adrieng/Documents/RSA/word_n/Word_n_unitary/build
+CMAKE_BINARY_DIR = /home/adrieng/Documents/Dev/C-Cpp/RSA/Word_n_unitary/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -97,9 +97,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adrieng/Documents/RSA/word_n/Word_n_unitary/build/CMakeFiles /home/adrieng/Documents/RSA/word_n/Word_n_unitary/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/adrieng/Documents/Dev/C-Cpp/RSA/Word_n_unitary/build/CMakeFiles /home/adrieng/Documents/Dev/C-Cpp/RSA/Word_n_unitary/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adrieng/Documents/RSA/word_n/Word_n_unitary/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/adrieng/Documents/Dev/C-Cpp/RSA/Word_n_unitary/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -152,40 +152,12 @@ Tests_word_n_unitary/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests_word_n_unitary.dir/build.make CMakeFiles/Tests_word_n_unitary.dir/build
 .PHONY : Tests_word_n_unitary/fast
 
-src/Main.o: src/Main.cpp.o
-.PHONY : src/Main.o
-
-# target to build an object file
-src/Main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Word_n_unitary.dir/build.make CMakeFiles/Word_n_unitary.dir/src/Main.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests_word_n_unitary.dir/build.make CMakeFiles/Tests_word_n_unitary.dir/src/Main.cpp.o
-.PHONY : src/Main.cpp.o
-
-src/Main.i: src/Main.cpp.i
-.PHONY : src/Main.i
-
-# target to preprocess a source file
-src/Main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Word_n_unitary.dir/build.make CMakeFiles/Word_n_unitary.dir/src/Main.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests_word_n_unitary.dir/build.make CMakeFiles/Tests_word_n_unitary.dir/src/Main.cpp.i
-.PHONY : src/Main.cpp.i
-
-src/Main.s: src/Main.cpp.s
-.PHONY : src/Main.s
-
-# target to generate assembly for a file
-src/Main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Word_n_unitary.dir/build.make CMakeFiles/Word_n_unitary.dir/src/Main.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests_word_n_unitary.dir/build.make CMakeFiles/Tests_word_n_unitary.dir/src/Main.cpp.s
-.PHONY : src/Main.cpp.s
-
 src/Word_n_unitary.o: src/Word_n_unitary.cpp.o
 .PHONY : src/Word_n_unitary.o
 
 # target to build an object file
 src/Word_n_unitary.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Word_n_unitary.dir/build.make CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests_word_n_unitary.dir/build.make CMakeFiles/Tests_word_n_unitary.dir/src/Word_n_unitary.cpp.o
 .PHONY : src/Word_n_unitary.cpp.o
 
 src/Word_n_unitary.i: src/Word_n_unitary.cpp.i
@@ -194,7 +166,6 @@ src/Word_n_unitary.i: src/Word_n_unitary.cpp.i
 # target to preprocess a source file
 src/Word_n_unitary.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Word_n_unitary.dir/build.make CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests_word_n_unitary.dir/build.make CMakeFiles/Tests_word_n_unitary.dir/src/Word_n_unitary.cpp.i
 .PHONY : src/Word_n_unitary.cpp.i
 
 src/Word_n_unitary.s: src/Word_n_unitary.cpp.s
@@ -203,7 +174,6 @@ src/Word_n_unitary.s: src/Word_n_unitary.cpp.s
 # target to generate assembly for a file
 src/Word_n_unitary.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Word_n_unitary.dir/build.make CMakeFiles/Word_n_unitary.dir/src/Word_n_unitary.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tests_word_n_unitary.dir/build.make CMakeFiles/Tests_word_n_unitary.dir/src/Word_n_unitary.cpp.s
 .PHONY : src/Word_n_unitary.cpp.s
 
 tests/Tests_word_n_unitary.o: tests/Tests_word_n_unitary.cpp.o
@@ -241,9 +211,6 @@ help:
 	@echo "... test"
 	@echo "... Tests_word_n_unitary"
 	@echo "... Word_n_unitary"
-	@echo "... src/Main.o"
-	@echo "... src/Main.i"
-	@echo "... src/Main.s"
 	@echo "... src/Word_n_unitary.o"
 	@echo "... src/Word_n_unitary.i"
 	@echo "... src/Word_n_unitary.s"

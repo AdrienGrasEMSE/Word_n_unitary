@@ -1,0 +1,23 @@
+Start testing: Dec 10 12:34 CET
+----------------------------------------------------------
+1/1 Testing: Word_n_unitary_Tests
+1/1 Test: Word_n_unitary_Tests
+Command: "/home/adrieng/Documents/Dev/C-Cpp/RSA/Word_n_unitary/build/Tests_word_n_unitary"
+Directory: /home/adrieng/Documents/Dev/C-Cpp/RSA/Word_n_unitary/build
+"Word_n_unitary_Tests" start time: Dec 10 12:34 CET
+Output:
+----------------------------------------------------------
+Test(Word_n_unitary) : START
+Test(Word_n_unitary) : ADDITION -> PASSED
+Test(Word_n_unitary) : SUBSTRACTION -> PASSED
+Test(Word_n_unitary) : MULTIPLICATION -> PASSED
+Test(Word_n_unitary) : PASSED
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Word_n_unitary_Tests" end time: Dec 10 12:34 CET
+"Word_n_unitary_Tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Dec 10 12:34 CET

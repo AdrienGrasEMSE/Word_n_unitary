@@ -1,5 +1,13 @@
+/**
+ * Implementation of the class Word_n_unitary
+ * 
+ * 
+ * @author Adrien GRAS
+ */
 #include "../include/Word_n_unitary.hpp"
 #include <iomanip>
+
+
 
 /**
  * ================================================================================================
@@ -85,9 +93,28 @@ Word_n_unitary Word_n_unitary::operator+(const Word_n_unitary& word_n_unitary_2)
 
 
 /**
+ * Overriding the addition :
+ * 
+ * The addition is trivial. The only point is that the carry is in the half top.
+ */
+Word_n_unitary& Word_n_unitary::operator+=(const Word_n_unitary& word_n_unitary_2) {
+
+    // Making the actual addition
+    this->data += word_n_unitary_2.getData();
+
+
+    // Returning the modified word
+    return *this;
+}
+
+
+/**
  * Overriding the substraction :
  * 
  * The substraction is trivial.
+ * 
+ * 
+ * @todo : rework the substraction (to prevent underflow)
  */
 Word_n_unitary Word_n_unitary::operator-(const Word_n_unitary& word_n_unitary_2) const {
 
