@@ -1,7 +1,7 @@
 
 # Word n units
 
-This small class is a 32-bit storage that actually uses 64 bits to store the data. The sole purpose here is to create a unitary element for a larger project, 128- to 2048-bit long words.
+This small class is a 32-bit storage that actually uses 64 bits to store the data. The sole purpose here is to create a unitary element for a larger project, 128 to 2048-bit long words.
 
 
 # Feature
