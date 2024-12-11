@@ -5,7 +5,6 @@
  * @author Adrien GRAS
  */
 #include "../include/Word_n_unitary.hpp"
-#include <iomanip>
 
 
 
@@ -62,6 +61,20 @@ Word_n_unitary::~Word_n_unitary() {
  */
 void Word_n_unitary::setData(std::string data_) {
 
+    // Data reset
+    this->data = 0x0;
+
+
+    // Erasing 0x
+    if (data_.size() >= 2 && data_.substr(0, 2) == "0x") {
+        data_.erase(0, 2);
+    }
+
+
+    // Erasing all space
+    data_.erase(std::remove(data_.begin(), data_.end(), ' '), data_.end());
+
+
     // Trying to convert the string into a hex number
     try {
 
@@ -75,7 +88,7 @@ void Word_n_unitary::setData(std::string data_) {
     catch (const std::out_of_range& e) {
         std::cerr << "Error: the string represents a number out of range." << std::endl;
     }
-    
+
 }
 
 
@@ -83,6 +96,10 @@ void Word_n_unitary::setData(std::string data_) {
  * Randomize : fill the data with random 0 and 1 
  */
 void Word_n_unitary::randomize() {
+
+    // Data reset
+    this->data = 0x0;
+
 
     // Generating the random data ft. Chat GPT
     std::random_device  rd;
@@ -133,6 +150,7 @@ Word_n_unitary Word_n_unitary::operator+(const Word_n_unitary& word_n_unitary_2)
 
     // Returning the sum
     return Word_n_unitary(this->data + word_n_unitary_2.getData());
+
 }
 
 
@@ -149,6 +167,7 @@ Word_n_unitary& Word_n_unitary::operator+=(const Word_n_unitary& word_n_unitary_
 
     // Returning the modified word
     return *this;
+
 }
 
 
@@ -164,6 +183,7 @@ Word_n_unitary Word_n_unitary::operator-(const Word_n_unitary& word_n_unitary_2)
 
     // Returning the substraction
     return Word_n_unitary(this->data - word_n_unitary_2.getData());
+
 }
 
 
@@ -198,6 +218,55 @@ Word_n_unitary Word_n_unitary::operator*(const Word_n_unitary& word_n_unitary_2)
 
     // Returning the product
     return Word_n_unitary((this->data & 0xFFFFFFFF) * (word_n_unitary_2.getData() & 0xFFFFFFFF));
+
+}
+
+
+/**
+ * Data instanciation with a data
+ */
+Word_n_unitary& Word_n_unitary::operator=(const uint64_t data_) {
+
+    // Getting the data
+    this->data = data_;
+
+
+    // Returning itslef
+    return *this;
+
+}
+
+
+/**
+ * Data instanciation with a string
+ */
+Word_n_unitary& Word_n_unitary::operator=(const std::string& data_) {
+
+    // Data reset
+    this->data = 0x0;
+
+
+    // Getting the data
+    this->setData(data_);
+
+
+    // Returning itslef
+    return *this;
+
+}
+
+
+/**
+ * Comparaison : internal data compraison (instead of addr compraison)
+ */
+bool Word_n_unitary::operator==(const Word_n_unitary& word_n_unitary_2) const {
+
+    // Data comparaison
+    if (this->data == word_n_unitary_2.getData()) {
+        return true;
+    }
+    return false;
+
 }
 
 
@@ -208,6 +277,20 @@ bool Word_n_unitary::operator!=(const Word_n_unitary& word_n_unitary_2) const {
 
     // Data comparaison
     if (this->data != word_n_unitary_2.getData()) {
+        return true;
+    }
+    return false;
+
+}
+
+
+/**
+ * Comparaison : internal data compraison with direct values
+ */
+bool Word_n_unitary::operator==(const u_int64_t data_2) const {
+
+    // Data comparaison
+    if (this->data == data_2) {
         return true;
     }
     return false;

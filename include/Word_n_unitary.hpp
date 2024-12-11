@@ -7,6 +7,8 @@
 #include <stdint.h>             // For the data format : uint64_t
 #include <random>               // For the randomize method
 #include <string>               // For the string setter
+#include <iomanip>              // For displays
+#include <algorithm>            // For string manipulation
 
 
 /**
@@ -68,7 +70,11 @@ public:
     Word_n_unitary& operator+=  (const Word_n_unitary& word_n_unitary_2);
     Word_n_unitary  operator-   (const Word_n_unitary& word_n_unitary_2)    const;
     Word_n_unitary  operator*   (const Word_n_unitary& word_n_unitary_2)    const;
+    Word_n_unitary& operator=   (const uint64_t data_);
+    Word_n_unitary& operator=   (const std::string&    data_);
+    bool            operator==  (const Word_n_unitary& word_n_unitary_2)    const;
     bool            operator!=  (const Word_n_unitary& word_n_unitary_2)    const;
+    bool            operator==  (const uint64_t data_2)                     const;
     bool            operator!=  (const uint64_t data_2)                     const;
 
 
