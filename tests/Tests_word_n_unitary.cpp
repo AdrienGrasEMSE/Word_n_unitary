@@ -185,7 +185,7 @@ int test_Word_n_unitary_addition() {
 
 
     // Test + reset
-    if (word_n_unitary_3 != Word_n_unitary(0x14C26504B)) {return 1;}
+    if (word_n_unitary_3 != 0x14C26504B) {return 1;}
     word_n_unitary_3 = 0x0;
 
 
@@ -199,14 +199,14 @@ int test_Word_n_unitary_addition() {
      * 
      * C = A + B = 0xC486F4A8
      */
-    word_n_unitary_1.setData(0x5D3BCC74);
-    word_n_unitary_3.setData(0x674B2834);
+    word_n_unitary_1 = 0x5D3BCC74;
+    word_n_unitary_3 = 0x674B2834;
     word_n_unitary_3 += word_n_unitary_1;
 
 
     // Test + reset
     if (word_n_unitary_3 != 0xC486F4A8) {return 1;}
-    word_n_unitary_3.setData(0x0);
+    word_n_unitary_3 = 0x0;
 
 
 
@@ -219,14 +219,15 @@ int test_Word_n_unitary_addition() {
      * 
      * C = A + B = 0x9DF9B1F1
      */
-    word_n_unitary_1.setData(0x77A248B4);
-    word_n_unitary_2.setData(0x2657693D);
+    word_n_unitary_1 = 0x77A248B4;
+    word_n_unitary_2 = 0x2657693D;
     word_n_unitary_3 = word_n_unitary_1 + word_n_unitary_2;
 
 
     // Test + reset
     if (word_n_unitary_3 != 0x9DF9B1F1) {return 1;}
-    word_n_unitary_3.setData(0x0);
+    word_n_unitary_3 = 0x0;
+
 
 
 
@@ -258,14 +259,14 @@ int test_Word_n_unitary_substraction() {
      * 
      * C = A - B = 0x314B44F2
      */
-    word_n_unitary_1.setData(0x94349C86);
-    word_n_unitary_2.setData(0x62E95794);
+    word_n_unitary_1 = 0x94349C86;
+    word_n_unitary_2 = 0x62E95794;
     word_n_unitary_3 = word_n_unitary_1 - word_n_unitary_2;
 
 
     // Test + reset
     if (word_n_unitary_3 != 0x314B44F2) {return 1;}
-    word_n_unitary_3.setData(0x0);
+    word_n_unitary_3 = 0x0;
 
 
 
@@ -278,14 +279,14 @@ int test_Word_n_unitary_substraction() {
      * 
      * C = A - B = 0x666C76C7
      */
-    word_n_unitary_1.setData(0xBF6E8AF5);
-    word_n_unitary_2.setData(0x5902142E);
+    word_n_unitary_1 = 0xBF6E8AF5;
+    word_n_unitary_2 = 0x5902142E;
     word_n_unitary_3 = word_n_unitary_1 - word_n_unitary_2;
 
 
     // Test + reset
     if (word_n_unitary_3 != 0x666C76C7) {return 1;}
-    word_n_unitary_3.setData(0x0);
+    word_n_unitary_3 = 0x0;
 
 
 
@@ -298,14 +299,14 @@ int test_Word_n_unitary_substraction() {
      * 
      * C = A - B = 0x40B19C2D
      */
-    word_n_unitary_1.setData(0x9284A957);
-    word_n_unitary_2.setData(0x51D30D2A);
+    word_n_unitary_1 = 0x9284A957;
+    word_n_unitary_2 = 0x51D30D2A;
     word_n_unitary_3 = word_n_unitary_1 - word_n_unitary_2;
 
 
     // Test + reset
     if (word_n_unitary_3 != 0x40B19C2D) {return 1;}
-    word_n_unitary_3.setData(0x0);
+    word_n_unitary_3 = 0x0;
 
 
 
@@ -337,14 +338,14 @@ int test_Word_n_unitary_multiplication() {
      * 
      * C = A * B = 0x88905866 C629809E
      */
-    word_n_unitary_1.setData(0xFEDEAB26);
-    word_n_unitary_2.setData(0x892B5FD5);
+    word_n_unitary_1 = 0xFEDEAB26;
+    word_n_unitary_2 = 0x892B5FD5;
     word_n_unitary_3 = word_n_unitary_1 * word_n_unitary_2;
 
 
     // Test + reset
     if (word_n_unitary_3 != 0x88905866C629809E) {return 1;}
-    word_n_unitary_3.setData(0x0);
+    word_n_unitary_3 = 0x0;
 
 
 
@@ -357,14 +358,14 @@ int test_Word_n_unitary_multiplication() {
      * 
      * C = A * B = 0x7718F3E4 7B2F79E4
      */
-    word_n_unitary_1.setData(0xE0F017AE);
-    word_n_unitary_2.setData(0x878B3C5E);
+    word_n_unitary_1 = 0xE0F017AE;
+    word_n_unitary_2 = 0x878B3C5E;
     word_n_unitary_3 = word_n_unitary_1 * word_n_unitary_2;
 
 
     // Test + reset
     if (word_n_unitary_3 != 0x7718F3E47B2F79E4) {return 1;}
-    word_n_unitary_3.setData(0x0);
+    word_n_unitary_3 = 0x0;
 
 
 
@@ -377,14 +378,14 @@ int test_Word_n_unitary_multiplication() {
      * 
      * C = A + B = 0x65D224B0 1A3A215C
      */
-    word_n_unitary_1.setData(0x79FAAA1A);
-    word_n_unitary_2.setData(0xD5B183E6);
+    word_n_unitary_1 = 0x79FAAA1A;
+    word_n_unitary_2 = 0xD5B183E6;
     word_n_unitary_3 = word_n_unitary_1 * word_n_unitary_2;
 
 
     // Test + reset
     if (word_n_unitary_3 != 0x65D224B01A3A215C) {return 1;}
-    word_n_unitary_3.setData(0x0);
+    word_n_unitary_3 = 0x0;
 
 
 
