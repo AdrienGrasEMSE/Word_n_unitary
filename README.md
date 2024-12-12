@@ -50,7 +50,7 @@ And these three terms live in a different power of 2:
 Does that sound complicated? I think it is. But in the case of the Word_n_unitary class, $a_1$ and $b_1$ are equal to 0, and therefore so are $\alpha$ and $\beta$.
 ###
 To sum up, if we have A and B, two objects in Word_n_unitary :
-- $A * B = a_0 * b_0$3
+- $A * B = a_0 * b_0$
 ###
 > Adrien GRAS, École d'ingénieurs de Mines Saint Étienne
 >
