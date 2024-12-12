@@ -25,6 +25,10 @@ int test_Word_n_unitary_multiplication();
  */
 int main() {
 
+    // Test variable
+    int test = 0;
+
+
     // Test start
     std::cout << "Test(Word_n_unitary) : START" << std::endl;
 
@@ -36,10 +40,16 @@ int main() {
     word.display();
 
 
+    // Randomizer test
+    word.randomize();
+    std::cout << "Test(Word_n_unitary) : RANDOMIZE          -> ";
+    word.display();
+
+
     // Carry test
-    int carry = 0;
+    word.setData(0x1AFFFF0000ULL);
     if (word.getCarry() != 0x0000001A) {
-        carry = 1;
+        test += 1;
         std::cout << "Test(Word_n_unitary) : CARRY              -> FAILED" << std::endl;
     } else {
         std::cout << "Test(Word_n_unitary) : CARRY              -> PASSED" << std::endl;
@@ -47,30 +57,63 @@ int main() {
 
 
     // Carry reset test
-    int carry_reset = 0;
     word.resetCarry();
     if (word.getCarry() != 0x00000000) {
-        carry_reset = 1;
+        test += 1;
         std::cout << "Test(Word_n_unitary) : CARRY RESET        -> FAILED" << std::endl;
     } else {
         std::cout << "Test(Word_n_unitary) : CARRY RESET        -> PASSED" << std::endl;
     }
 
 
-    // Randomizer test
-    word.randomize();
-    std::cout << "Test(Word_n_unitary) : RANDOMIZE          -> ";
-    word.display();
-
-
     // String setter test
-    int string_setter = 0;
     word.setData("0x1AFFFFULL");
     if (word.getData() != 0x1AFFFFULL) {
-        string_setter = 1;
+        test += 1;
         std::cout << "Test(Word_n_unitary) : STRING SETTER      -> FAILED" << std::endl;
     } else {
         std::cout << "Test(Word_n_unitary) : STRING SETTER      -> PASSED" << std::endl;
+    }
+
+
+    // Data instanciation with = uint test
+    word = 0x458FFULL;
+    if (word.getData() != 0x458FFULL) {
+        test += 1;
+        std::cout << "Test(Word_n_unitary) : OP (VAR = UINT)    -> FAILED" << std::endl;
+    } else {
+        std::cout << "Test(Word_n_unitary) : OP (VAR = UINT)    -> PASSED" << std::endl;
+    }
+
+
+    // Data instanciation with = string test
+    word = "0x477893B";
+    if (word.getData() != 0x477893B) {
+        test += 1;
+        std::cout << "Test(Word_n_unitary) : OP (VAR = STRING)  -> FAILED" << std::endl;
+    } else {
+        std::cout << "Test(Word_n_unitary) : OP (VAR = STRING)  -> PASSED" << std::endl;
+    }
+
+
+    // Data comparaison with == uint test
+    word = 0x458FFULL;
+    if ((word == 0x458FFULL) != true) {
+        test += 1;
+        std::cout << "Test(Word_n_unitary) : OP (VAR == UINT)   -> FAILED" << std::endl;
+    } else {
+        std::cout << "Test(Word_n_unitary) : OP (VAR == UINT)   -> PASSED" << std::endl;
+    }
+
+
+    // Data comparaison with == string test
+    Word_n_unitary word_2 = Word_n_unitary(0x477893B);
+    word = 0x477893B;
+    if ((word == word_2) != true) {
+        test += 1;
+        std::cout << "Test(Word_n_unitary) : OP (VAR1 == VAR2)  -> FAILED" << std::endl;
+    } else {
+        std::cout << "Test(Word_n_unitary) : OP (VAR1 == VAR2)  -> PASSED" << std::endl;
     }
 
 
@@ -81,6 +124,7 @@ int main() {
     } else {
         std::cout << "Test(Word_n_unitary) : ADDITION           -> PASSED" << std::endl;
     }
+    test += addition;
 
 
     // Substraction
@@ -90,6 +134,7 @@ int main() {
     } else {
         std::cout << "Test(Word_n_unitary) : SUBSTRACTION       -> PASSED" << std::endl;
     }
+    test += substaction;
 
 
     // Addition
@@ -99,10 +144,11 @@ int main() {
     } else {
         std::cout << "Test(Word_n_unitary) : MULTIPLICATION     -> PASSED" << std::endl;
     }
+    test += multiplication;
 
 
     // Program end
-    if ((carry + carry_reset + addition + string_setter + substaction + multiplication) == 0) {
+    if (test == 0) {
         std::cout << "Test(Word_n_unitary) : PASSED" << std::endl;
         return 0;
     }
