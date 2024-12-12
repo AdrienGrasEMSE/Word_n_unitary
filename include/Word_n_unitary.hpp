@@ -70,7 +70,7 @@ public:
     Word_n_unitary& operator+=  (const Word_n_unitary& word_n_unitary_2);
     Word_n_unitary  operator-   (const Word_n_unitary& word_n_unitary_2)    const;
     Word_n_unitary  operator*   (const Word_n_unitary& word_n_unitary_2)    const;
-    Word_n_unitary& operator=   (const uint64_t data_);
+    Word_n_unitary& operator=   (const unsigned long   data_);
     Word_n_unitary& operator=   (const std::string&    data_);
     bool            operator==  (const Word_n_unitary& word_n_unitary_2)    const;
     bool            operator!=  (const Word_n_unitary& word_n_unitary_2)    const;

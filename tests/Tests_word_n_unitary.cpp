@@ -133,14 +133,14 @@ int test_Word_n_unitary_addition() {
      * 
      * C = A + B = 0x1 4C26504B
      */
-    word_n_unitary_1.setData(0xF1DFD08D);
-    word_n_unitary_2.setData(0x5A467FBE);
+    word_n_unitary_1 = 0xF1DFD08D;
+    word_n_unitary_2 = 0x5A467FBE;
     word_n_unitary_3 = word_n_unitary_1 + word_n_unitary_2;
 
 
     // Test + reset
-    if (word_n_unitary_3 != 0x14C26504B) {return 1;}
-    word_n_unitary_3.setData(0x0);
+    if (word_n_unitary_3 != Word_n_unitary(0x14C26504B)) {return 1;}
+    word_n_unitary_3 = 0x0;
 
 
 
