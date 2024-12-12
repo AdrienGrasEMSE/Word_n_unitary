@@ -31,6 +31,7 @@ int main() {
 
     // Test start
     std::cout << "Test(Word_n_unitary) : START" << std::endl;
+    std::cout << "\n\n" << std::endl;
 
 
     // Display test
@@ -44,6 +45,16 @@ int main() {
     word.randomize();
     std::cout << "Test(Word_n_unitary) : RANDOMIZE          -> ";
     word.display();
+
+
+    // Reset test
+    word.reset();
+    if (word.getData() != 0x0) {
+        test += 1;
+        std::cout << "Test(Word_n_unitary) : RESET              -> FAILED" << std::endl;
+    } else {
+        std::cout << "Test(Word_n_unitary) : RESET              -> PASSED" << std::endl;
+    }
 
 
     // Carry test
@@ -148,6 +159,7 @@ int main() {
 
 
     // Program end
+    std::cout << "\n\n" << std::endl;
     if (test == 0) {
         std::cout << "Test(Word_n_unitary) : PASSED" << std::endl;
         return 0;

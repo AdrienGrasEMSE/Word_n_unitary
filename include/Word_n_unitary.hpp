@@ -50,6 +50,7 @@ public:
 
 
     // Word unit setter and getter
+    void            reset()                     {this->data = 0x0;}
     void            setData(uint64_t    data_)  {this->data = data_;}
     void            setData(std::string data_);
     uint64_t        getData()   const           {return this->data;}
