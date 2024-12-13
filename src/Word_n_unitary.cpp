@@ -117,17 +117,27 @@ void Word_n_unitary::randomize() {
 /**
  * Display : Display the full data stored (with its carries)
  */
-void Word_n_unitary::display(bool endl) const {
+void Word_n_unitary::display(bool string_shape, bool endl) const {
 
-    // Display the unitary word with this model [upper_part] lower_part
-    std::cout   << std::hex             << std::uppercase       << "[0x"    << std::setw(8)
-                << std::setfill('0')    << (data >> 32)         << "] 0x"   << std::setw(8)
-                << std::setfill('0')    << (data & 0xFFFFFFFF)  << std::dec;
+    // Displaying with the selected shape
+    if (string_shape) {
+
+        // Display like 'data' (without 0x)
+        std::cout << std::hex << std::uppercase << std::setw(8) << std::setfill('0') << (data & 0xFFFFFFFF) << std::dec;
+
+    } else {
+
+        // Display the unitary word with this model [upper_part] lower_part
+        std::cout   << std::hex             << std::uppercase       << "[0x"    << std::setw(8)
+                    << std::setfill('0')    << (data >> 32)         << "] 0x"   << std::setw(8)
+                    << std::setfill('0')    << (data & 0xFFFFFFFF)  << std::dec;
 
 
-    // End of line
-    if (endl) {
-        std::cout << std::endl;
+        // End of line
+        if (endl) {
+            std::cout << std::endl;
+        }
+
     }
 
 }

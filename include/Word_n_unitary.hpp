@@ -63,7 +63,7 @@ public:
 
 
     // Display the full data stored (with its carries)
-    void            display(bool endl = true)   const;
+    void            display(bool string_shape = false, bool endl = true)   const;
 
 
     // Overriding operators
