@@ -13,6 +13,7 @@
 
 
 // Signatures
+int test_Word_n_unitary_comparator();
 int test_Word_n_unitary_addition();
 int test_Word_n_unitary_substraction();
 int test_Word_n_unitary_multiplication();
@@ -35,7 +36,7 @@ int main() {
 
 
     // Display test
-    Word_n_unitary word = Word_n_unitary(0x1AFFFF0000ULL);
+    Word_n_unitary word = Word_n_unitary(0xFFFF0000ULL);
     std::cout << "Test(Word_n_unitary) : Cout               -> " << word << std::endl;
     std::cout << "Test(Word_n_unitary) : DISPLAY            -> ";
     word.display();
@@ -54,26 +55,6 @@ int main() {
         std::cout << "Test(Word_n_unitary) : RESET              -> FAILED" << std::endl;
     } else {
         std::cout << "Test(Word_n_unitary) : RESET              -> PASSED" << std::endl;
-    }
-
-
-    // Carry test
-    word.setData(0x1AFFFF0000ULL);
-    if (word.getCarry() != 0x0000001A) {
-        test += 1;
-        std::cout << "Test(Word_n_unitary) : CARRY              -> FAILED" << std::endl;
-    } else {
-        std::cout << "Test(Word_n_unitary) : CARRY              -> PASSED" << std::endl;
-    }
-
-
-    // Carry reset test
-    word.resetCarry();
-    if (word.getCarry() != 0x00000000) {
-        test += 1;
-        std::cout << "Test(Word_n_unitary) : CARRY RESET        -> FAILED" << std::endl;
-    } else {
-        std::cout << "Test(Word_n_unitary) : CARRY RESET        -> PASSED" << std::endl;
     }
 
 
@@ -107,25 +88,14 @@ int main() {
     }
 
 
-    // Data comparaison with == uint test
-    word = 0x458FFULL;
-    if ((word == 0x458FFULL) != true) {
-        test += 1;
-        std::cout << "Test(Word_n_unitary) : OP (VAR == UINT)   -> FAILED" << std::endl;
+    // Comparators
+    int comparator = test_Word_n_unitary_comparator();
+    if (comparator == 1) {
+        std::cout << "Test(Word_n_unitary) : COMPARATOR         -> FAILED" << std::endl;
     } else {
-        std::cout << "Test(Word_n_unitary) : OP (VAR == UINT)   -> PASSED" << std::endl;
+        std::cout << "Test(Word_n_unitary) : COMPARATOR         -> PASSED" << std::endl;
     }
-
-
-    // Data comparaison with == string test
-    Word_n_unitary word_2 = Word_n_unitary(0x477893B);
-    word = 0x477893B;
-    if ((word == word_2) != true) {
-        test += 1;
-        std::cout << "Test(Word_n_unitary) : OP (VAR1 == VAR2)  -> FAILED" << std::endl;
-    } else {
-        std::cout << "Test(Word_n_unitary) : OP (VAR1 == VAR2)  -> PASSED" << std::endl;
-    }
+    test += comparator;
 
 
     // Addition
@@ -148,7 +118,7 @@ int main() {
     test += substaction;
 
 
-    // Addition
+    // Multiplication
     int multiplication = test_Word_n_unitary_multiplication();
     if (multiplication == 1) {
         std::cout << "Test(Word_n_unitary) : MULTIPLICATION     -> FAILED" << std::endl;
@@ -166,6 +136,89 @@ int main() {
     }
     std::cout << "Test(Word_n_unitary) : FAILED" << std::endl;
     return 1;
+
+}
+
+
+
+
+/**
+ * Comparator test
+ */
+int test_Word_n_unitary_comparator() {
+
+    // Test variables
+    Word_n_unitary word_n_unitary_1 = Word_n_unitary();
+    Word_n_unitary word_n_unitary_2 = Word_n_unitary();
+
+
+
+
+    /**
+     * Equality test between one word_n_unitary and a uint32_t
+     */
+    word_n_unitary_1 = 0x458FFULL;
+    if ((word_n_unitary_1 == 0x458FFULL) != true) {
+        return 1;
+    }
+    word_n_unitary_1 = 0x783FFULL;
+    if ((word_n_unitary_1 != 0x964FFULL) != true) {
+        return 1;
+    }
+
+
+
+
+    /**
+     * Equality test between two word_n_unitary
+     */
+    word_n_unitary_1 = 0x458FFULL;
+    word_n_unitary_2 = 0x458FFULL;
+    if ((word_n_unitary_1 == word_n_unitary_2) != true) {
+        return 1;
+    }
+    word_n_unitary_1 = 0x783FFULL;
+    word_n_unitary_2 = 0x964FFULL;
+    if ((word_n_unitary_1 != word_n_unitary_2) != true) {
+        return 1;
+    }
+
+
+
+
+    /**
+     * Differential test between two word_n_unitary
+     */
+    word_n_unitary_1 = 0x458FFULL;
+    word_n_unitary_2 = 0x458FFULL;
+    if ((word_n_unitary_1 >= word_n_unitary_2) != true) {
+        return 1;
+    }
+    if ((word_n_unitary_1 <= word_n_unitary_2) != true) {
+        return 1;
+    }
+    word_n_unitary_1 = 0x964FFULL;
+    word_n_unitary_2 = 0x458FFULL;
+    if ((word_n_unitary_1 >= word_n_unitary_2) != true) {
+        return 1;
+    }
+    if ((word_n_unitary_1 > word_n_unitary_2) != true) {
+        return 1;
+    }
+    word_n_unitary_1 = 0x458FFULL;
+    word_n_unitary_2 = 0x964FFULL;
+    if ((word_n_unitary_1 <= word_n_unitary_2) != true) {
+        return 1;
+    }
+    if ((word_n_unitary_1 < word_n_unitary_2) != true) {
+        return 1;
+    }
+
+
+
+
+    // End of tests
+    return 0;
 
 }
 
@@ -197,7 +250,7 @@ int test_Word_n_unitary_addition() {
 
 
     // Test + reset
-    if (word_n_unitary_3 != 0x14C26504B) {return 1;}
+    if (word_n_unitary_3 != 0x4C26504B || word_n_unitary_3.getCarry() != 0x1) {return 1;}
     word_n_unitary_3 = 0x0;
 
 
@@ -356,7 +409,7 @@ int test_Word_n_unitary_multiplication() {
 
 
     // Test + reset
-    if (word_n_unitary_3 != 0x88905866C629809E) {return 1;}
+    if (word_n_unitary_3 != 0xC629809E || word_n_unitary_3.getCarry() != 0x88905866) {return 1;}
     word_n_unitary_3 = 0x0;
 
 
@@ -376,7 +429,7 @@ int test_Word_n_unitary_multiplication() {
 
 
     // Test + reset
-    if (word_n_unitary_3 != 0x7718F3E47B2F79E4) {return 1;}
+    if (word_n_unitary_3 != 0x7B2F79E4 || word_n_unitary_3.getCarry() != 0x7718F3E4) {return 1;}
     word_n_unitary_3 = 0x0;
 
 
@@ -396,7 +449,7 @@ int test_Word_n_unitary_multiplication() {
 
 
     // Test + reset
-    if (word_n_unitary_3 != 0x65D224B01A3A215C) {return 1;}
+    if (word_n_unitary_3 != 0x1A3A215C || word_n_unitary_3.getCarry() != 0x65D224B0) {return 1;}
     word_n_unitary_3 = 0x0;
 
 

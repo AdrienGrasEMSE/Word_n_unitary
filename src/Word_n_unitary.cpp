@@ -235,7 +235,7 @@ Word_n_unitary Word_n_unitary::operator*(const Word_n_unitary& word_n_unitary_2)
 /**
  * Data instanciation with a data
  */
-Word_n_unitary& Word_n_unitary::operator=(const unsigned long data_) {
+Word_n_unitary& Word_n_unitary::operator=(const uint32_t data_) {
 
     // Getting the data
     this->data = data_;
@@ -295,12 +295,54 @@ bool Word_n_unitary::operator!=(const Word_n_unitary& word_n_unitary_2) const {
 
 
 /**
- * Comparaison : internal data compraison with direct values
+ * Comparaison : internal data compraison (instead of addr compraison)
  */
-bool Word_n_unitary::operator==(const u_int64_t data_2) const {
+bool Word_n_unitary::operator<=(const Word_n_unitary& word_n_unitary_2) const {
 
     // Data comparaison
-    if (this->data == data_2) {
+    if (this->data <= word_n_unitary_2.getData()) {
+        return true;
+    }
+    return false;
+
+}
+
+
+/**
+ * Comparaison : internal data compraison (instead of addr compraison)
+ */
+bool Word_n_unitary::operator<(const Word_n_unitary& word_n_unitary_2) const {
+
+    // Data comparaison
+    if (this->data < word_n_unitary_2.getData()) {
+        return true;
+    }
+    return false;
+
+}
+
+
+/**
+ * Comparaison : internal data compraison (instead of addr compraison)
+ */
+bool Word_n_unitary::operator>=(const Word_n_unitary& word_n_unitary_2) const {
+
+    // Data comparaison
+    if (this->data >= word_n_unitary_2.getData()) {
+        return true;
+    }
+    return false;
+
+}
+
+
+/**
+ * Comparaison : internal data compraison (instead of addr compraison)
+ */
+bool Word_n_unitary::operator>(const Word_n_unitary& word_n_unitary_2) const {
+
+    // Data comparaison
+    if (this->data > word_n_unitary_2.getData()) {
         return true;
     }
     return false;
@@ -311,10 +353,24 @@ bool Word_n_unitary::operator==(const u_int64_t data_2) const {
 /**
  * Comparaison : internal data compraison with direct values
  */
-bool Word_n_unitary::operator!=(const u_int64_t data_2) const {
+bool Word_n_unitary::operator==(const uint32_t data_2) const {
 
     // Data comparaison
-    if (this->data != data_2) {
+    if (static_cast<uint32_t>(this->data) == data_2) {
+        return true;
+    }
+    return false;
+
+}
+
+
+/**
+ * Comparaison : internal data compraison with direct values
+ */
+bool Word_n_unitary::operator!=(const uint32_t data_2) const {
+
+    // Data comparaison
+    if (static_cast<uint32_t>(this->data) != data_2) {
         return true;
     }
     return false;

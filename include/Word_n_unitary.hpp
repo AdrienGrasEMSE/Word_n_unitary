@@ -51,10 +51,10 @@ public:
 
     // Word unit setter and getter
     void            reset()                     {this->data = 0x0;}
-    void            setData(uint64_t    data_)  {this->data = data_;}
+    void            setData(uint32_t    data_)  {this->data = static_cast<uint64_t>(data_);}
     void            setData(std::string data_);
-    uint64_t        getData()   const           {return this->data;}
-    uint64_t        getCarry()  const           {return static_cast<uint64_t>(data >> 32);}
+    uint32_t        getData()   const           {return static_cast<uint64_t>(this->data);}
+    uint32_t        getCarry()  const           {return (data >> 32);}
     void            resetCarry()                {this->data = this->data & 0x00000000FFFFFFFFULL;}
 
 
@@ -71,12 +71,16 @@ public:
     Word_n_unitary& operator+=  (const Word_n_unitary& word_n_unitary_2);
     Word_n_unitary  operator-   (const Word_n_unitary& word_n_unitary_2)    const;
     Word_n_unitary  operator*   (const Word_n_unitary& word_n_unitary_2)    const;
-    Word_n_unitary& operator=   (const unsigned long   data_);
+    Word_n_unitary& operator=   (const uint32_t        data_);
     Word_n_unitary& operator=   (const std::string&    data_);
     bool            operator==  (const Word_n_unitary& word_n_unitary_2)    const;
     bool            operator!=  (const Word_n_unitary& word_n_unitary_2)    const;
-    bool            operator==  (const uint64_t data_2)                     const;
-    bool            operator!=  (const uint64_t data_2)                     const;
+    bool            operator>=  (const Word_n_unitary& word_n_unitary_2)    const;
+    bool            operator>   (const Word_n_unitary& word_n_unitary_2)    const;
+    bool            operator<=  (const Word_n_unitary& word_n_unitary_2)    const;
+    bool            operator<   (const Word_n_unitary& word_n_unitary_2)    const;
+    bool            operator==  (const uint32_t data_2)                     const;
+    bool            operator!=  (const uint32_t data_2)                     const;
 
 
     // Overriding std::cout for display
