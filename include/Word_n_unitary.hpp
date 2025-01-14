@@ -51,6 +51,7 @@ public:
 
     // Word unit setter and getter
     void            reset()                     {this->data = 0x0;}
+    void            maxValue()                  {this->data = UINT32_MAX;}
     void            setData(uint32_t    data_)  {this->data = static_cast<uint64_t>(data_);}
     void            setData(std::string data_);
     uint32_t        getData()   const           {return static_cast<uint64_t>(this->data);}
@@ -90,7 +91,3 @@ public:
 
 
 #endif // WORD_N_UNITARY
-
-
-
-
