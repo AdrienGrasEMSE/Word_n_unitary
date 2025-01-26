@@ -169,7 +169,7 @@ void Word_n_unitary::display(bool string_shape, bool endl) const {
 Word_n_unitary Word_n_unitary::operator+(const Word_n_unitary& word_n_unitary_2) const {
 
     // Returning the sum
-    return Word_n_unitary(this->data + word_n_unitary_2.getData() + word_n_unitary_2.getCarry());
+    return Word_n_unitary(this->data + word_n_unitary_2.getWholeData());
 
 }
 
@@ -182,7 +182,7 @@ Word_n_unitary Word_n_unitary::operator+(const Word_n_unitary& word_n_unitary_2)
 Word_n_unitary& Word_n_unitary::operator+=(const Word_n_unitary& word_n_unitary_2) {
 
     // Making the actual addition
-    this->data += word_n_unitary_2.getData() + word_n_unitary_2.getCarry();
+    this->data += word_n_unitary_2.getWholeData();
 
 
     // Returning the modified word
