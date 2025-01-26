@@ -60,7 +60,7 @@ Word_n_unitary::~Word_n_unitary() {
 void Word_n_unitary::resetCarry() {
 
     this->data = this->data & 0x00000000FFFFFFFFULL;
-    std::cout << "#####################" << std::endl;
+    std::cout << "]]]]]]]]]]]]]]]]]]]]]]]]]]" << std::endl;
 
 }
 
@@ -283,7 +283,7 @@ Word_n_unitary& Word_n_unitary::operator=(const std::string& data_) {
 bool Word_n_unitary::operator==(const Word_n_unitary& word_n_unitary_2) const {
 
     // Data comparaison
-    if (this->data == word_n_unitary_2.getData()) {
+    if (this->getData() == word_n_unitary_2.getData()) {
         return true;
     }
     return false;
