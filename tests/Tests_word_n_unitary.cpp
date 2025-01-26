@@ -40,6 +40,7 @@ int main() {
     std::cout << "Test(Word_n_unitary) : Cout               -> " << word << std::endl;
     std::cout << "Test(Word_n_unitary) : DISPLAY            -> ";
     word.display();
+    word.resetCarry();
 
 
     // Randomizer test

@@ -56,7 +56,7 @@ public:
     void            setData(std::string data_);
     uint32_t        getData()   const           {return static_cast<uint64_t>(this->data);}
     uint32_t        getCarry()  const           {return (data >> 32);}
-    void            resetCarry()                {this->data = this->data & 0x00000000FFFFFFFFULL;}
+    void            resetCarry();
 
 
     // Fill a random value in the data

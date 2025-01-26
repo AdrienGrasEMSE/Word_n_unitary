@@ -55,6 +55,17 @@ Word_n_unitary::~Word_n_unitary() {
  */
 
 /**
+ * Reset Carry
+ */
+void Word_n_unitary::resetCarry() {
+
+    this->data = this->data & 0x00000000FFFFFFFFULL;
+    std::cout << "+++++++++++++++++++++++" << std::endl;
+
+}
+
+
+/**
  * String setter :
  * 
  * Since we can write strings that look likes hexa numbers, here is the setter.
