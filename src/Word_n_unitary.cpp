@@ -60,7 +60,7 @@ Word_n_unitary::~Word_n_unitary() {
 void Word_n_unitary::resetCarry() {
 
     this->data = this->data & 0x00000000FFFFFFFFULL;
-    std::cout << "+++++++++++++++++++++++" << std::endl;
+    std::cout << "#####################" << std::endl;
 
 }
 

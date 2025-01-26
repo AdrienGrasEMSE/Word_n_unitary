@@ -54,7 +54,7 @@ public:
     void            maxValue()                  {this->data = UINT32_MAX;}
     void            setData(uint32_t    data_)  {this->data = static_cast<uint64_t>(data_);}
     void            setData(std::string data_);
-    uint32_t        getData()   const           {return static_cast<uint64_t>(this->data);}
+    uint32_t        getData()   const           {return static_cast<uint32_t>(this->data);}
     uint32_t        getCarry()  const           {return (data >> 32);}
     void            resetCarry();
 

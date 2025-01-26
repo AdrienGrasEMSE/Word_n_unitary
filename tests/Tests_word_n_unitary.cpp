@@ -40,7 +40,6 @@ int main() {
     std::cout << "Test(Word_n_unitary) : Cout               -> " << word << std::endl;
     std::cout << "Test(Word_n_unitary) : DISPLAY            -> ";
     word.display();
-    word.resetCarry();
 
 
     // Randomizer test
@@ -252,6 +251,15 @@ int test_Word_n_unitary_addition() {
 
     // Test + reset
     if (word_n_unitary_3 != 0x4C26504B || word_n_unitary_3.getCarry() != 0x1) {return 1;}
+
+
+    word_n_unitary_3.display();
+
+    std::cout << true << std::endl;
+    std::cout << (word_n_unitary_3 == 0x4C26504B) << std::endl;
+
+
+
     word_n_unitary_3 = 0x0;
 
 
