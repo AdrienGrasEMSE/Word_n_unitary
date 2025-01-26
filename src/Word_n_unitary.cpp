@@ -297,7 +297,7 @@ bool Word_n_unitary::operator==(const Word_n_unitary& word_n_unitary_2) const {
 bool Word_n_unitary::operator!=(const Word_n_unitary& word_n_unitary_2) const {
 
     // Data comparaison
-    if (this->data != word_n_unitary_2.getData()) {
+    if (this->getData() != word_n_unitary_2.getData()) {
         return true;
     }
     return false;
@@ -311,7 +311,7 @@ bool Word_n_unitary::operator!=(const Word_n_unitary& word_n_unitary_2) const {
 bool Word_n_unitary::operator<=(const Word_n_unitary& word_n_unitary_2) const {
 
     // Data comparaison
-    if (this->data <= word_n_unitary_2.getData()) {
+    if (this->getData() <= word_n_unitary_2.getData()) {
         return true;
     }
     return false;
@@ -325,7 +325,7 @@ bool Word_n_unitary::operator<=(const Word_n_unitary& word_n_unitary_2) const {
 bool Word_n_unitary::operator<(const Word_n_unitary& word_n_unitary_2) const {
 
     // Data comparaison
-    if (this->data < word_n_unitary_2.getData()) {
+    if (this->getData() < word_n_unitary_2.getData()) {
         return true;
     }
     return false;
@@ -339,7 +339,7 @@ bool Word_n_unitary::operator<(const Word_n_unitary& word_n_unitary_2) const {
 bool Word_n_unitary::operator>=(const Word_n_unitary& word_n_unitary_2) const {
 
     // Data comparaison
-    if (this->data >= word_n_unitary_2.getData()) {
+    if (this->getData() >= word_n_unitary_2.getData()) {
         return true;
     }
     return false;
@@ -353,7 +353,7 @@ bool Word_n_unitary::operator>=(const Word_n_unitary& word_n_unitary_2) const {
 bool Word_n_unitary::operator>(const Word_n_unitary& word_n_unitary_2) const {
 
     // Data comparaison
-    if (this->data > word_n_unitary_2.getData()) {
+    if (this->getData() > word_n_unitary_2.getData()) {
         return true;
     }
     return false;
@@ -367,7 +367,7 @@ bool Word_n_unitary::operator>(const Word_n_unitary& word_n_unitary_2) const {
 bool Word_n_unitary::operator==(const uint32_t data_2) const {
 
     // Data comparaison
-    if (static_cast<uint32_t>(this->data) == data_2) {
+    if (this->getData() == data_2) {
         return true;
     }
     return false;
@@ -381,7 +381,7 @@ bool Word_n_unitary::operator==(const uint32_t data_2) const {
 bool Word_n_unitary::operator!=(const uint32_t data_2) const {
 
     // Data comparaison
-    if (static_cast<uint32_t>(this->data) != data_2) {
+    if (this->getData() != data_2) {
         return true;
     }
     return false;
