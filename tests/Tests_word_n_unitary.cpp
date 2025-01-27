@@ -48,6 +48,10 @@ int main() {
     word.display();
 
 
+    // GetBit test
+    std::cout << word.getBit(3) << word.getBit(2) << word.getBit(1) << word.getBit(0) << std::endl << std::endl;
+
+
     // Reset test
     word.reset();
     if (word.getData() != 0x0) {
@@ -393,7 +397,7 @@ int test_Word_n_unitary_multiplication() {
     Word_n_unitary word_n_unitary_1 = Word_n_unitary();
     Word_n_unitary word_n_unitary_2 = Word_n_unitary();
     Word_n_unitary word_n_unitary_3 = Word_n_unitary();
-    Word_n_unitary word_n_unitary_4 = Word_n_unitary();
+ 
 
     /**
      * Calculation 1 :
@@ -406,87 +410,51 @@ int test_Word_n_unitary_multiplication() {
     word_n_unitary_1 = 0xFEDEAB26;
     word_n_unitary_2 = 0x892B5FD5;
     word_n_unitary_3 = word_n_unitary_1 * word_n_unitary_2;
-    word_n_unitary_4 = word_n_unitary_1 * word_n_unitary_2;
-
-
-    word_n_unitary_3.display();
-    word_n_unitary_4.display();
-    word_n_unitary_4 += word_n_unitary_3;
-    word_n_unitary_4.display();
-
 
 
     // Test + reset
     if (word_n_unitary_3 != 0xC629809E || word_n_unitary_3.getCarry() != 0x88905866) {return 1;}
-
-
-
     word_n_unitary_3 = 0x0;
 
 
 
 
+    /**
+     * Calculation 2 :
+     * 
+     * A = 0xE0F017AE
+     * B = 0x878B3C5E
+     * 
+     * C = A * B = 0x7718F3E4 7B2F79E4
+     */
+    word_n_unitary_1 = 0xE0F017AE;
+    word_n_unitary_2 = 0x878B3C5E;
+    word_n_unitary_3 = word_n_unitary_1 * word_n_unitary_2;
+
+
+    // Test + reset
+    if (word_n_unitary_3 != 0x7B2F79E4 || word_n_unitary_3.getCarry() != 0x7718F3E4) {return 1;}
+    word_n_unitary_3 = 0x0;
 
 
 
 
-
-    // /**
-    //  * Calculation 1 :
-    //  * 
-    //  * A = 0xFEDEAB26
-    //  * B = 0x892B5FD5
-    //  * 
-    //  * C = A * B = 0x88905866 C629809E
-    //  */
-    // word_n_unitary_1 = 0xFEDEAB26;
-    // word_n_unitary_2 = 0x892B5FD5;
-    // word_n_unitary_3 = word_n_unitary_1 * word_n_unitary_2;
-
-
-    // // Test + reset
-    // if (word_n_unitary_3 != 0xC629809E || word_n_unitary_3.getCarry() != 0x88905866) {return 1;}
-    // word_n_unitary_3 = 0x0;
+    /**
+     * Calculation 3 :
+     * 
+     * A = 0x79FAAA1A
+     * B = 0xD5B183E6
+     * 
+     * C = A + B = 0x65D224B0 1A3A215C
+     */
+    word_n_unitary_1 = 0x79FAAA1A;
+    word_n_unitary_2 = 0xD5B183E6;
+    word_n_unitary_3 = word_n_unitary_1 * word_n_unitary_2;
 
 
-
-
-    // /**
-    //  * Calculation 2 :
-    //  * 
-    //  * A = 0xE0F017AE
-    //  * B = 0x878B3C5E
-    //  * 
-    //  * C = A * B = 0x7718F3E4 7B2F79E4
-    //  */
-    // word_n_unitary_1 = 0xE0F017AE;
-    // word_n_unitary_2 = 0x878B3C5E;
-    // word_n_unitary_3 = word_n_unitary_1 * word_n_unitary_2;
-
-
-    // // Test + reset
-    // if (word_n_unitary_3 != 0x7B2F79E4 || word_n_unitary_3.getCarry() != 0x7718F3E4) {return 1;}
-    // word_n_unitary_3 = 0x0;
-
-
-
-
-    // /**
-    //  * Calculation 3 :
-    //  * 
-    //  * A = 0x79FAAA1A
-    //  * B = 0xD5B183E6
-    //  * 
-    //  * C = A + B = 0x65D224B0 1A3A215C
-    //  */
-    // word_n_unitary_1 = 0x79FAAA1A;
-    // word_n_unitary_2 = 0xD5B183E6;
-    // word_n_unitary_3 = word_n_unitary_1 * word_n_unitary_2;
-
-
-    // // Test + reset
-    // if (word_n_unitary_3 != 0x1A3A215C || word_n_unitary_3.getCarry() != 0x65D224B0) {return 1;}
-    // word_n_unitary_3 = 0x0;
+    // Test + reset
+    if (word_n_unitary_3 != 0x1A3A215C || word_n_unitary_3.getCarry() != 0x65D224B0) {return 1;}
+    word_n_unitary_3 = 0x0;
 
 
 
